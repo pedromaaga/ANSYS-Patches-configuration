@@ -195,7 +195,7 @@ F_VALUE			= -100							! [N] Force value [also put the orientation +/-]
 SOLUTION_TYPE		= 0							! Choose the analyse that you want to do
 										! 0 - Modal, 1 - Harmonic, 2 - Both
 ! Modal analyse
-QNTD_MODES		= 9							! Quantities of modes
+QNTD_MODES		= 10							! Quantities of modes
 
 ! Harmonic analyse
 FREQ_MODE_EXCITED	= 38							! [Hz] Write the frequency of the mode you want to excit
