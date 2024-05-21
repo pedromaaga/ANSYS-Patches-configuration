@@ -29,8 +29,8 @@ KEYW,PR_MULTI,1 								! Multi Analysis
 !			  Status: OK		  		           !
 !--------------------------------------------------------------------------!
 !****_ 2.0 Quantities of patches [OK]
-PATCHES_X		= 2							! Quantity in x
-PATCHES_Y		= 2							! Quantity in y
+PATCHES_X		= 3							! Quantity in x
+PATCHES_Y		= 3							! Quantity in y
 QNTD_PATCHES		= PATCHES_X*PATCHES_Y					! 1 - 1 patch | 4 - 4 patches
 !***_
 !****_ 2.1 Geometric parameters [OK]
@@ -40,8 +40,8 @@ WPL		= 0.314								! [m] Width
 TPL		= 0.001								! [m] Thickness
 !
 !	Patch Dimension
-LPA		= 0.0414							! [m] Length 
-WPA		= 0.0314							! [m] Width
+LPA		= (LPL/5)/3							! [m] Length 
+WPA		= (WPL/5)/3							! [m] Width
 TPA		= 0.0005							! [m] Thickness
 !
 !***_
@@ -180,7 +180,7 @@ MESH_TYPE		= 1							! 0 - Have to adjust the values of scale
 	CORNERDIV		= 4*MESH_SCALE					! Can change this number
 	LENGTH_MESH		= LPA/PATCHDIV
 *ELSEIF,MESH_TYPE,EQ,1,THEN							! Mesh with the length of the element
-	NUMBER_DIVISION		= 8						! Can change this number
+	NUMBER_DIVISION		= 8/3						! Can change this number
 	PATCHDIV		= NUMBER_DIVISION	
 	LENGTH_MESH		= LPA/PATCHDIV					! The element length is related to LPA value
 *ENDIF
